@@ -3,8 +3,8 @@ import s from './content.module.css';
 
 export const Content = () => {
     return (
-        <header className={s.content}>
+        <div className={s.content}>
             <span>DESCRIPTION </span>
-        </header>
+        </div>
     );      
 };
