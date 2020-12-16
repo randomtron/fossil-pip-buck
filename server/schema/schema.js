@@ -1,5 +1,4 @@
 const graphql = require('graphql');
-
 const {GraphQLObjectType, 
        GraphQLString, 
        GraphQLSchema, 
@@ -7,12 +6,7 @@ const {GraphQLObjectType,
        GraphQLList
     } = graphql;
 
-const fanfics = [
-    { id: '1', name: 'Fallout: Equestria', author: 'Kkat'},
-    { id: '2', name: 'Fallout Equestria: Project Horizon', author: 'Somber'},
-    { id: '3', name: 'Fallout Equestria: The Fossil', author: 'Lucky Ticket'},
-];
-
+const Fanfics = require('../models/fanfics');
 
 const FanficType = new GraphQLObjectType({
     name: 'Fanfic',
@@ -30,13 +24,13 @@ const Query = new GraphQLObjectType({
             type: FanficType,
             args: {id:{type: GraphQLID}},
             resolve(parent, args) {
-                return fanfics.find(fanfic => fanfic.id == args.id);
+                return Fanfics.findById(args.id);
             },
         },
         fanfics: {
             type: new GraphQLList(FanficType),
             resolve(parent, args) {
-                return fanfics;
+                return Fanfics.find({});
             },
         },
     },
