@@ -3,11 +3,13 @@ import s from './fanfics.module.css';
 import withHoc from './fanfics-hoc';
 
 const List = (props: any) => {
-    console.log(props.data)
+    const fanfics = props.data.fanfics.map((e: any) => <li>
+        <span>{e.name}, </span>
+        <span>author: {e.author}</span>
+    </li>)
     return (
         <div className={s.fanfics}>
-            <div>point 1</div>
-            <div>point 2</div>
+            <ul>{fanfics}</ul>          
         </div>
     );      
 };
