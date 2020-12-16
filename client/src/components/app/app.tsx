@@ -5,7 +5,8 @@ import { ApolloProvider } from 'react-apollo';
 import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
 import { List } from '../list/list';
-import { Content } from '../content/content'
+import { Content } from '../content/content';
+import Fanfics from '../list/fanfics/fanfics';
 
 import s from './app.module.css';
 
@@ -18,7 +19,7 @@ export const App = () => {
         <ApolloProvider client={client}>
             <div className={s.appWrapper}>
                 <Header />
-                <List />
+                <Fanfics />
                 <Content />
                 <Footer />
             </div>
