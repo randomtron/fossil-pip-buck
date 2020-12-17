@@ -1,0 +1,14 @@
+.fanficsWrapper {
+    display: grid;
+  
+    grid-template-areas:
+    "l c";
+     grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+     /* grid-gap: 10px; */
+  };
+
+  .fanfics {
+    grid-area: c;
+    background-color: rgb(182, 241, 180);
+  }

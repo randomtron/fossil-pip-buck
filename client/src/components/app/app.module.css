@@ -2,10 +2,10 @@
     display: grid;
   
     grid-template-areas:
-    "h h"
-    "l c"
-    "f f";
+    "h"
+    "c"
+    "f";
      grid-template-rows: 1fr 4fr 1fr;
-      grid-template-columns: 2fr 10fr;
+      grid-template-columns: 1f;
      /* grid-gap: 10px; */
   }

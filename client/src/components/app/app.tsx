@@ -2,11 +2,9 @@ import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
-import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
-import { List } from '../list/list';
-import { Content } from '../content/content';
-import Fanfics from '../list/fanfics/fanfics';
+import { Fanfics } from '../fanfics/fanfics';
+import { Footer } from '../footer/footer';
 
 import s from './app.module.css';
 
@@ -20,7 +18,6 @@ export const App = () => {
             <div className={s.appWrapper}>
                 <Header />
                 <Fanfics />
-                <Content />
                 <Footer />
             </div>
         </ApolloProvider>
