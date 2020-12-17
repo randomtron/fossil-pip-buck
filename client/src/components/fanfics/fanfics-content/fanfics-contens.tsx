@@ -3,7 +3,7 @@ import s from './fanfics-content.module.css';
 
 export const FanficsContent = () => {
     return (
-        <div className={s.fanficsContent}>
+        <div className={s.content}>
             <span>DESCRIPTION </span>
         </div>
     );      

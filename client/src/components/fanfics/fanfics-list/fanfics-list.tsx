@@ -12,7 +12,7 @@ const List = (props: any) => {
     }
 
     return (
-        <div className={s.fanficsList}>
+        <div className={s.list}>
             <ul>{fanfics}</ul>
         </div>
     );

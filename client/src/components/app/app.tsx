@@ -1,6 +1,7 @@
 import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
+import {Route} from 'react-router-dom';
 
 import { Header } from '../header/header';
 import { Fanfics } from '../fanfics/fanfics';
@@ -17,7 +18,11 @@ export const App = () => {
         <ApolloProvider client={client}>
             <div className={s.appWrapper}>
                 <Header />
-                <Fanfics />
+                <div>
+                    <Route
+                        path='/fanfics'
+                        render={() => <Fanfics />} />
+                </div>
                 <Footer />
             </div>
         </ApolloProvider>
