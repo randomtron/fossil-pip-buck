@@ -4,7 +4,7 @@ import { ApolloProvider } from 'react-apollo';
 import {Route} from 'react-router-dom';
 
 import { Header } from '../header/header';
-import { Fanfics } from '../fanfics/fanfics';
+import  Fanfics  from '../fanfics/fanfics';
 import { Footer } from '../footer/footer';
 
 import s from './app.module.css';
