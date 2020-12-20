@@ -8,12 +8,12 @@ import s from './fanfics.module.css';
 
 
 const Fanfics = (props: any) => {
-    const [fanfic, setFanfic] = useState<string>("5fd9eeacf4d7ca5581d97161")
-    console.log(fanfic);
+    const [fanficID, setFanfic] = useState<string>("5fd9eeacf4d7ca5581d97161")
+    console.log(props.data);
     return (
         <div className={s.fanficsWrapper}>
             <FanficList fanficSet={(id: string) => setFanfic(id)} data={props.data}/>
-            <FanficsContent />
+            <FanficsContent fanficID={fanficID} data={props.data}/>
         </div>
     );      
 };

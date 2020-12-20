@@ -7,8 +7,7 @@ export const FanficList = (props: any) => {
    if (props.data.fanfics) {
         fanfics = props.data.fanfics.map((e: any) => 
         <li key={e.id} onClick={() => props.fanficSet(e.id)}>
-            <span>{e.name}, </span>
-            <span>author: {e.author}</span>
+            <span>{e.name} </span>
         </li>)
     }
 
