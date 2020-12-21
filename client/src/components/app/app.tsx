@@ -1,10 +1,11 @@
 import React from 'react';
-import ApolloClient from 'apollo-boost';
+import ApolloClient, { from } from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
-import {Route} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import { Header } from '../header/header';
-import  Fanfics  from '../fanfics/fanfics';
+import Fanfics from '../fanfics/fanfics';
+import { DataList } from '../data/data-list/data-list';
 import { Footer } from '../footer/footer';
 
 import s from './app.module.css';
@@ -22,6 +23,9 @@ export const App = () => {
                     <Route
                         path='/fanfics'
                         render={() => <Fanfics />} />
+                    <Route
+                        path='/data'
+                        render={() => <DataList />} />
                 </div>
                 <Footer />
             </div>
