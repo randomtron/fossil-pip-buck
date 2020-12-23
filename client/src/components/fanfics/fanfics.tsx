@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 
-import {FanficList} from './fanfics-list/fanfics-list';
-import {FanficsContent} from './fanfics-content/fanfics-contens';
-import withHoc from './fanfics-hoc';
+import { useFanficsState } from '../../main/hooks/use-fanfics-state';
+
+import { FanficList } from './fanfics-list/fanfics-list';
+import { FanficsContent } from './fanfics-content/fanfics-contens';
 
 import s from './fanfics.module.css';
 
-
-const Fanfics = (props: any) => {
-    const [fanficID, setFanfic] = useState<string>("5fd9eeacf4d7ca5581d97161")
-    console.log(props.data);
+const Fanfics = () => {
+    const { fanficID, setFanfic, fanfics } = useFanficsState();
     return (
         <div className={s.fanficsWrapper}>
-            <FanficList fanficSet={(id: string) => setFanfic(id)} data={props.data}/>
-            <FanficsContent fanficID={fanficID} data={props.data}/>
+            <FanficList fanficSet={(id: string) => setFanfic(id)} fanfics={fanfics} />
+            <FanficsContent fanficID={fanficID} fanfics={fanfics} />
         </div>
-    );      
+    );
 };
 
-export default withHoc(Fanfics);
+export default Fanfics;

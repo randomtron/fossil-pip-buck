@@ -1,6 +1,5 @@
 import React from 'react';
-import ApolloClient, { from } from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { Route } from 'react-router-dom';
 
 import { Header } from '../header/header';
@@ -12,6 +11,7 @@ import s from './app.module.css';
 
 const client = new ApolloClient({
     uri: 'http://localhost:3005/graphql',
+    cache: new InMemoryCache()
 });
 
 export const App = () => {

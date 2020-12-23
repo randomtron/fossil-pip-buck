@@ -1,19 +1,23 @@
 import React from 'react';
 import s from './fanfics-list.module.css';
 
+type PropsType = {
+    fanfics: Array<any>,
+    fanficSet: (id: string) => void
+}
 
-export const FanficList = (props: any) => {
-    let fanfics = null
-   if (props.data.fanfics) {
-        fanfics = props.data.fanfics.map((e: any) => 
-        <li key={e.id} onClick={() => props.fanficSet(e.id)}>
-            <span>{e.name} </span>
-        </li>)
+export const FanficList: React.FC<PropsType> = ({ fanfics, fanficSet }) => {
+    let currentFanfics = null
+    if (fanfics) {
+        currentFanfics = fanfics.map((e: any) =>
+            <li key={e.id} onClick={() => fanficSet(e.id)}>
+                <span>{e.name} </span>
+            </li>)
     }
 
     return (
         <div className={s.list}>
-            <ul>{fanfics}</ul>
+            <ul>{currentFanfics}</ul>
         </div>
     );
 };

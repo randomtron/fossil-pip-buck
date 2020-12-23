@@ -1,5 +1,5 @@
 import React from 'react';
-import useInputState from './useInputState';
+import useInputState from '../../../../main/hooks/use-data-input-state';
 
 type PropsType = {
     saveTodo: (text: string) => void
