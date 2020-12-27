@@ -1,10 +1,10 @@
 const graphql = require('graphql');
-const {GraphQLObjectType, 
-       GraphQLString, 
-       GraphQLSchema, 
-       GraphQLID,
-       GraphQLList
-    } = graphql;
+const { GraphQLObjectType,
+    GraphQLString,
+    GraphQLSchema,
+    GraphQLID,
+    GraphQLList
+} = graphql;
 
 const Fanfics = require('../models/fanfics');
 const Datatodo = require('../models/datatodo');
@@ -27,19 +27,40 @@ const DatatodoType = new GraphQLObjectType({
 });
 
 
-const Mutation =  new GraphQLObjectType({
+const Mutation = new GraphQLObjectType({
     name: 'Mutation',
     fields: {
         addDatatodo: {
             type: DatatodoType,
             args: {
-                name: {type: GraphQLString},
+                name: { type: GraphQLString },
             },
-            resolve(parents, args){
+            resolve(parent, args) {
                 const datatodo = new Datatodo({
                     name: args.name
                 });
                 return datatodo.save();
+            },
+        },
+        deleteDatatodo: {
+            type: DatatodoType,
+            args: { id: { type: GraphQLID } },
+            resolve(parent, args) {
+                return Datatodo.findByIdAndRemove(args.id);
+            },
+        },
+        updateDatatodo: {
+            type: DatatodoType,
+            args: {
+                id: { type: GraphQLID },
+                name: { type: GraphQLString },
+            },
+            resolve(parent, args) {
+                return Datatodo.findByIdAndUpdate(
+                    args.id,
+                    { $set: { name: args.name } },
+                    { new: true }
+                );
             },
         },
     },
@@ -50,7 +71,7 @@ const Query = new GraphQLObjectType({
     fields: {
         fanfic: {
             type: FanficType,
-            args: {id:{type: GraphQLID}},
+            args: { id: { type: GraphQLID } },
             resolve(parent, args) {
                 return Fanfics.findById(args.id);
             },
