@@ -42,7 +42,7 @@ const Query = new GraphQLObjectType({
                 return Fanfics.find({});
             },
         },
-        datatodo: {
+        datatodos: {
             type: new GraphQLList(DatatodoType),
             resolve(parent, args) {
                 return Datatodo.find({});
