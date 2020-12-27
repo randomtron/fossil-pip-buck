@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 export default (initialState: Array<string>) => {
-    const [todos, setTodos] = useState(initialState)
+    const [todos, setTodos] = useState(initialState);
     return {
         todos,
         addTodo: (todoText: string) => {

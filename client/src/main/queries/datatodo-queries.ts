@@ -8,3 +8,11 @@ export const datatodosQuery = gql`
         }
     }
 `;
+
+export const addDatatodoMutation = gql`
+    mutation addDatatodoMutation($name: String) {
+        addDatatodo(name: $name){
+            name
+        }
+    }
+`;
