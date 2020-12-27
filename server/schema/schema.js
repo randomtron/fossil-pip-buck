@@ -26,6 +26,25 @@ const DatatodoType = new GraphQLObjectType({
     }),
 });
 
+
+const Mutation =  new GraphQLObjectType({
+    name: 'Mutation',
+    fields: {
+        addDatatodo: {
+            type: DatatodoType,
+            args: {
+                name: {type: GraphQLString},
+            },
+            resolve(parents, args){
+                const datatodo = new Datatodo({
+                    name: args.name
+                });
+                return datatodo.save();
+            },
+        },
+    },
+})
+
 const Query = new GraphQLObjectType({
     name: 'Query',
     fields: {
@@ -54,4 +73,5 @@ const Query = new GraphQLObjectType({
 
 module.exports = new GraphQLSchema({
     query: Query,
+    mutation: Mutation,
 });
