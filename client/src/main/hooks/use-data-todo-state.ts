@@ -1,11 +1,7 @@
 import { useQuery, useMutation } from '@apollo/client';
 
 import {datatodosQuery, addDatatodoMutation} from '../queries/datatodo-queries'; 
-
-interface Todo {
-    id: any,
-    name: string
-};
+import {Todo} from '../types';
 
 export default () => {
     const { loading, error, data } = useQuery(datatodosQuery);

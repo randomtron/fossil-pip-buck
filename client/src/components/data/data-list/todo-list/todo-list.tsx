@@ -1,9 +1,6 @@
 import React from 'react';
 
-interface Todo {
-    id: any,
-    name: string
-};
+import {Todo} from '../../../../main/types';
 
 type PropsType = {
     todos: Array<Todo>,
