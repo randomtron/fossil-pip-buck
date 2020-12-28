@@ -5,7 +5,7 @@ import {TodoList} from './todo-list/todo-list';
 import {TodoForm} from './todo-form/todo-form';
 
 export const DataList = () => {
-    const { datatodos, addTodo } = useTodoState();
+    const { datatodos, addTodo, deleteTodo } = useTodoState();
     return (
         <div>
             <div>
@@ -14,7 +14,7 @@ export const DataList = () => {
                 }}/>
             </div>
             <div>
-                <TodoList todos={datatodos} />
+                <TodoList todos={datatodos} deleteTodo={deleteTodo}/>
             </div>
         </div>
     )

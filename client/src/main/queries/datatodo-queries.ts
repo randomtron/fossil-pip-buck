@@ -16,3 +16,11 @@ export const addDatatodoMutation = gql`
         }
     }
 `;
+
+export const deleteDatatodoMutation = gql`
+    mutation deleteDatatodo($id: ID) {
+        deleteDatatodo(id: $id){
+            name
+        }
+    }
+`;
