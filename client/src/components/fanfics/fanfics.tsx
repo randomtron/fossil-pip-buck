@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { useFanficsState } from '../../main/hooks/use-fanfics-state';
 

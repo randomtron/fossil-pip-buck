@@ -1,17 +1,20 @@
 import React from 'react';
 
+interface Todo {
+    id: any,
+    name: string
+};
+
 type PropsType = {
-    todos: Array<string>,
-    deleteTodo: (index: number) => void,
+    todos: Array<Todo>,
 };
 
 
-export const TodoList: React.FC<PropsType> = ({todos, deleteTodo}) => {
-    const list: Array<Object> = todos.map((todo, index) => {
+export const TodoList: React.FC<PropsType> = ({todos}) => {
+    const list: Array<Object> = todos.map((todo) => {
         return (
-            <div>
-                <div>{todo}</div>
-                <button onClick={() => deleteTodo(index)}>delete</button>
+            <div key={todo.id}>
+                <div>{todo.name}</div>
             </div>
         )
     })

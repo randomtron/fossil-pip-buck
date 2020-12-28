@@ -1,15 +1,27 @@
-import {useState} from 'react';
+import { useQuery, useMutation } from '@apollo/client';
 
-export default (initialState: Array<string>) => {
-    const [todos, setTodos] = useState(initialState);
+import {datatodosQuery, addDatatodoMutation} from '../queries/datatodo-queries'; 
+
+interface Todo {
+    id: any,
+    name: string
+};
+
+export default () => {
+    const { loading, error, data } = useQuery(datatodosQuery);
+    const [addDatatodo] = useMutation(addDatatodoMutation);
+    let datatodos: Array<Todo> = [];
+    if (loading) datatodos = [];
+    if (data) {
+        datatodos = data.datatodos;
+    };
     return {
-        todos,
+        datatodos,
         addTodo: (todoText: string) => {
-            setTodos([...todos, todoText]);
-        },
-        deleteTodo: (todoIndex: number) => {
-            const newTodos = todos.filter((_, index) => index !== todoIndex);
-            setTodos(newTodos);
+            addDatatodo({ 
+                variables: { name: todoText },
+                refetchQueries: [{ query: datatodosQuery }],
+            })
         },
     };
 };
