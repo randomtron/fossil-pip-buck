@@ -26,7 +26,7 @@ export default () => {
         },
         deleteTodo: (todoID: string) => {
             deleteDatatodo({
-                variables: { id: todoID}, 
+                variables: { id: todoID },
                 refetchQueries: [{ query: datatodosQuery }],
             })
         },
