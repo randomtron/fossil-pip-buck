@@ -10,8 +10,8 @@ export const FanficList: React.FC<PropsType> = ({ fanfics, fanficSet }) => {
     let currentFanfics = null
     if (fanfics) {
         currentFanfics = fanfics.map((e: any) =>
-            <li key={e.id} onClick={() => fanficSet(e.id)}>
-                <span>{e.name} </span>
+            <li className={s.element} key={e.id} onClick={() => fanficSet(e.id)}>
+                <span>{e.name}</span>
             </li>)
     }
 

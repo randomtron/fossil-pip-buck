@@ -3,7 +3,7 @@
   
     grid-template-areas:
     "h"
-    "c"
+    "m"
     "f";
     grid-template-rows: 2fr 41fr 5fr;
     grid-template-columns: 1f;

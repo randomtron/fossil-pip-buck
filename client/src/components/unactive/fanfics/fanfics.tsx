@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useFanficsState } from '../../main/hooks/use-fanfics-state';
+import { useFanficsState } from '../../../main/hooks/use-fanfics-state';
 
 import { FanficList } from './fanfics-list/fanfics-list';
 import { FanficsContent } from './fanfics-content/fanfics-contens';
