@@ -1,0 +1,35 @@
+.appWrapper {
+    display: grid;
+  
+    grid-template-areas:
+    "h"
+    "m"
+    "f";
+    grid-template-rows: 2fr 22fr 5fr;
+    grid-template-columns: 1f;
+
+    margin: 0;
+    padding: 0;
+    background-color: rgb(7, 7, 7);
+    font-family: Arial;
+    color:rgb(47, 214, 24);
+    font-size: x-large;
+  }
+
+.section {
+    color:rgb(47, 214, 24);
+    text-decoration: none;
+    margin: 10px;
+}
+
+.section:hover {
+    background-color: rgb(47, 214, 24);
+    color:rgb(0, 0, 0);
+  }
+
+.sub-nav {
+    padding: 10px;
+    grid-area: s;
+    display: flex;
+    justify-content: center;
+}

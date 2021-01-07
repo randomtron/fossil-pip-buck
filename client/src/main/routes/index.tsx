@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 
 import {Data} from '../../components/data/data';
+import {Characters} from '../../components/data/characters/characters';
 
 import s from './routes.module.css';
 
@@ -13,4 +14,11 @@ export const Routes = () => {
                 render={() => <Data />} />
         </div>
     )
+}
+
+export const SubNavRoutes = () => {
+    return (
+    <div>
+        <Route path='/data/characters' render={() => <Characters/>}/>
+    </div>)
 }

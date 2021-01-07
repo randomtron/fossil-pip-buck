@@ -5,11 +5,11 @@ import { Header } from '../header/header';
 import { Routes } from '../../main/routes';
 import { Footer } from '../footer/footer';
 
-import s from './app.module.css';
+import './app.css';
 
 export const App = () => {
     return (
-            <div className={s.appWrapper}>
+            <div className="appWrapper">
                 <Header />
                 <Routes />
                 <Footer />

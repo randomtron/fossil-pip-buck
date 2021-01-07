@@ -1,17 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+
+import {DataSubnav} from '../common/data-subnav/data-subnav';
+import {SubNavRoutes} from '../../main/routes';
 
 import s from './data.module.css';
 
 export const Data = () => {
     return (
         <div className={s.dataWrapper}>
-            <div className="sub-nav">
-                <NavLink to="/data/status" className="section"><span>STATUS</span></NavLink>
-                <NavLink to="/data/special" className="section"><span>SPECIAL</span></NavLink>
-            </div>
+            <DataSubnav/>
             <div className={s.main}>
-                main
+                <SubNavRoutes/>
             </div>
         </div>
     )
