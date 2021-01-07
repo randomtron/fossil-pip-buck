@@ -33,3 +33,12 @@
     display: flex;
     justify-content: center;
 }
+
+.main {
+  display: grid;
+
+  grid-template-areas:
+  "l c";
+   grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+};
