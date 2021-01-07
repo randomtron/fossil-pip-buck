@@ -8,6 +8,7 @@ const { GraphQLObjectType,
 
 const Fanfics = require('../models/fanfics');
 const Datatodo = require('../models/datatodo');
+const Characters = require('../models/characters');
 
 const FanficType = new GraphQLObjectType({
     name: 'Fanfic',
@@ -23,6 +24,17 @@ const DatatodoType = new GraphQLObjectType({
     fields: () => ({
         id: { type: GraphQLID },
         name: { type: GraphQLString },
+    }),
+});
+
+const CharactersType = new GraphQLObjectType({
+    name: 'Characters',
+    fields: () => ({
+        id: { type: GraphQLID },
+        name: { type: GraphQLString },
+        gender: { type: GraphQLString },
+        race: { type: GraphQLString },
+        desc: { type: GraphQLString },
     }),
 });
 
@@ -86,6 +98,12 @@ const Query = new GraphQLObjectType({
             type: new GraphQLList(DatatodoType),
             resolve(parent, args) {
                 return Datatodo.find({});
+            },
+        },
+        characters: {
+            type: new GraphQLList(CharactersType),
+            resolve(parent, args){
+                return Characters.find({})
             },
         },
     },
