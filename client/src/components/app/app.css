@@ -13,22 +13,30 @@ li {
     grid-template-rows: 2fr 22fr 5fr;
     grid-template-columns: 1f;
 
+    background-color: rgb(7, 7, 7);
+    font-family: sans-serif;
+    font-weight:500;
+    color:#13f016;
+    font-size: x-large;
     margin: 0;
     padding: 0;
-    background-color: rgb(7, 7, 7);
-    font-family: Arial;
-    color:rgb(47, 214, 24);
-    font-size: x-large;
   }
 
 .section {
-    color:rgb(47, 214, 24);
+    color:#13f016;
     text-decoration: none;
     margin: 10px;
 }
 
+.sectionactive {
+  text-decoration: none;
+  margin: 10px;
+  background-color: #13f016;
+  color:rgb(0, 0, 0);
+}
+
 .section:hover {
-    background-color: rgb(47, 214, 24);
+    background-color: #13f016;
     color:rgb(0, 0, 0);
   }
 

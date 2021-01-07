@@ -19,6 +19,7 @@ export const Routes = () => {
 export const SubNavRoutes = () => {
     return (
     <div>
+        <Route exact path='/data' render={() => <Characters/>}/>
         <Route path='/data/characters' render={() => <Characters/>}/>
     </div>)
 }

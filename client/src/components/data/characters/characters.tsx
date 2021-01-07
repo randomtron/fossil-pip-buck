@@ -13,7 +13,8 @@ export const Characters = () => {
         <div className="main">
             <CharactersList 
                 setCharacter={(id: string) => setCharacter(id)} 
-                characters={characters}/>
+                characters={characters}
+                characterID={characterID}/>   
             <CharactersContent 
                 characterID={characterID} 
                 characters={characters}/>
