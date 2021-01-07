@@ -1,13 +1,22 @@
 import React from 'react';
 
-export const CharactersList = () => {
+type PropsType = {
+    characters: Array<any>,
+    setCharacter: (id: string) => void
+}
+
+export const CharactersList: React.FC<PropsType> = ({ characters, setCharacter }) => {
+    let currentCharacters = null
+    if (characters) {
+        currentCharacters = characters.map((e: any) =>
+            <div className="section" key={e.id} onClick={() => setCharacter(e.id)}>
+                <span>{e.name}</span>
+            </div>)
+    }
+
     return (
         <div>
-            <ul>
-                <li>Test1</li>
-                <li>Test2</li>
-                <li>Test3</li>
-            </ul>
+            {currentCharacters}
         </div>
     );
 };
