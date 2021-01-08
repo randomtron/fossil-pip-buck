@@ -1,4 +1,10 @@
 .footer {
-    grid-area: f;
-    background-color:  #053f06;
-  }
+  padding: 0 200px;
+
+  grid-area: f;
+  border-top: 3px solid #13f016;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
