@@ -6,6 +6,8 @@ import { ApolloProvider } from '@apollo/client';
 
 import {client} from './main/apollo';
 
+import './index.css';
+
 
 ReactDOM.render(
   <React.StrictMode>
