@@ -10,7 +10,7 @@ export const CharactersContent: React.FC<PropsType> = ({ characters, characterID
         currentCharacter = characters.find((e: any) => e.id === characterID)
     }
     return (
-        <div>
+        <div className="content">
             {!currentCharacter ?
                 <div>Loading...</div> :
                 <div>

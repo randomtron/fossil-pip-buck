@@ -11,3 +11,13 @@ export const charactersQuery = gql`
         }
     }
 `;
+
+export const locationsQuery = gql`
+    query locationsQuery {
+        locations {
+            id
+            name
+            desc
+        }
+    }
+`;

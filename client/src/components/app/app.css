@@ -2,7 +2,6 @@ li {
   padding: 0;
   list-style-type: none;
 }
-
 .appWrapper {
     display: grid;
   
@@ -22,36 +21,65 @@ li {
     padding: 0;
   }
 
-.section {
-    color:#13f016;
-    text-decoration: none;
-    margin: 10px;
+
+
+.main {
+  display: grid;
+  
+  grid-template-areas:
+  "l c";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+  
+.list {
+  grid-area: l;
+}
+  
+.content {
+  grid-area: c;
+  padding: 5px;
 }
 
-.sectionactive {
-  text-decoration: none;
-  margin: 10px;
-  background-color: #13f016;
-  color:rgb(0, 0, 0);
-}
 
-.section:hover {
-    background-color: #13f016;
-    color:rgb(0, 0, 0);
-  }
 
 .sub-nav {
-    padding: 10px;
+    padding: 5px;
     grid-area: s;
     display: flex;
     justify-content: center;
 }
 
-.main {
-  display: grid;
+.sub-nav-block {
+  color:#13f016;
+  text-decoration: none;
+  margin: 10px;
+}
 
-  grid-template-areas:
-  "l c";
-   grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-};
+.sub-nav-block-bold {
+  color:#13f016;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: 700;
+}
+
+
+
+.section {
+  color:#13f016;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.sectionactive {
+text-decoration: none;
+margin: 10px;
+background-color: #13f016;
+color:rgb(0, 0, 0);
+}
+
+.section:hover {
+  background-color: #13f016;
+  color:rgb(0, 0, 0);
+}
+

@@ -19,7 +19,7 @@ export const CharactersList: React.FC<PropsType> = ({ characters, setCharacter, 
     }
 
     return (
-        <div>
+        <div className="list">
             {currentCharacters}
         </div>
     );

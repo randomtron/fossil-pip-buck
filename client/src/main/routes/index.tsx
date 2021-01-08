@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 
 import {Data} from '../../components/data/data';
 import {Characters} from '../../components/data/characters/characters';
+import {Locations} from '../../components/data/locations/locations';
 
 import s from './routes.module.css';
 
@@ -21,5 +22,6 @@ export const SubNavRoutes = () => {
     <div>
         <Route exact path='/data' render={() => <Characters/>}/>
         <Route path='/data/characters' render={() => <Characters/>}/>
+        <Route path='/data/locations' render={() => <Locations/>}/>
     </div>)
 }

@@ -4,7 +4,7 @@
     grid-template-areas:
     "s"
     "m";
-     grid-template-rows: 1fr 2fr;
+     grid-template-rows:60px 2fr;
       grid-template-columns: 1fr;
 }
 
