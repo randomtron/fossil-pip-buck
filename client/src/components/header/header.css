@@ -1,0 +1,30 @@
+.header {
+  padding: 0 300px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  grid-area: h;
+  border-bottom: 3px solid #13f016;
+}
+
+.headerBlock {
+  color:#13f016;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.headerBlock:hover {
+  color:#13f016;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: 700;
+}
+
+.headerBlockActive {
+  color:#13f016;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: 700;
+}

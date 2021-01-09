@@ -13,6 +13,7 @@ li {
     "f";
     grid-template-rows: 2fr 22fr 5fr;
     grid-template-columns: 1f;
+
     font-family: 'droid-sans';
     font-weight:300;
     color:#13f016;
