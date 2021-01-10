@@ -7,9 +7,9 @@ export const Header = () => {
     return (
         <header className="header">
             <NavLink 
-                to="/stats" 
+                to="/stat" 
                 className="headerBlock"
-                activeClassName="headerBlockActive"><span>STATS</span></NavLink> 
+                activeClassName="headerBlockActive"><span>STAT</span></NavLink> 
             <NavLink 
                 to="/inv" 
                 className="headerBlock"
