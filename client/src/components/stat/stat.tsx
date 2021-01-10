@@ -1,15 +1,16 @@
 import React from 'react';
 
-import {StatSubnav} from '../common/stat-subnav/stat-subnav';
+import { StatSubnav } from '../common/stat-subnav/stat-subnav';
+import { SubNavRoutes } from '../../main/routes';
 
 import s from './stat.module.css';
 
 export const Stat = () => {
     return (
         <div className={s.statWrapper}>
-            <StatSubnav/>
+            <StatSubnav />
             <div className={s.main}>
-                STAT
+                <SubNavRoutes />
             </div>
         </div>
     );
