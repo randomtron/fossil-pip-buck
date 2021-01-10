@@ -6,8 +6,20 @@ const { GraphQLObjectType,
     GraphQLList
 } = graphql;
 
+const Specials = require('../models/specials');
 const Characters = require('../models/characters');
 const Locations = require('../models/locations');
+
+
+
+const SpecialsType = new GraphQLObjectType({
+    name: 'Specials',
+    fields: () => ({
+        id: { type: GraphQLID },
+        desc: { type: GraphQLString },
+        value: { type: GraphQLString },
+    }),
+});
 
 const CharactersType = new GraphQLObjectType({
     name: 'Characters',
@@ -30,9 +42,16 @@ const LocationsType = new GraphQLObjectType({
 });
 
 
+
 const Query = new GraphQLObjectType({
     name: 'Query',
     fields: {
+        specials: {
+            type: new GraphQLList(SpecialsType),
+            resolve(parents, args){
+                return Specials.find({})
+            }
+        },
         characters: {
             type: new GraphQLList(CharactersType),
             resolve(parent, args){
