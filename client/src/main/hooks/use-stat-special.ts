@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { specialsQuery } from '../queries/stat-queries';
 
-export const useStatSpecials = () => {
+export const useStatSpecial = () => {
     const [specialID, setSpecial] = useState<string>("5ffae58672fc0832c39f07a9")
     const { loading, error, data } = useQuery(specialsQuery);
     let specials;

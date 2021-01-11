@@ -16,6 +16,7 @@ const SpecialsType = new GraphQLObjectType({
     name: 'Specials',
     fields: () => ({
         id: { type: GraphQLID },
+        name: { type: GraphQLString },
         desc: { type: GraphQLString },
         value: { type: GraphQLString },
     }),
