@@ -11,7 +11,7 @@ li {
     "h"
     "m"
     "f";
-    grid-template-rows: 2fr 22fr 5fr;
+    grid-template-rows: 2fr 24fr 3fr;
     grid-template-columns: 1f;
 
     font-family: 'droid-sans';

@@ -7,6 +7,7 @@ const { GraphQLObjectType,
 } = graphql;
 
 const Specials = require('../models/specials');
+const Perks = require('../models/perks');
 const Characters = require('../models/characters');
 const Locations = require('../models/locations');
 
@@ -19,6 +20,16 @@ const SpecialsType = new GraphQLObjectType({
         name: { type: GraphQLString },
         desc: { type: GraphQLString },
         value: { type: GraphQLString },
+    }),
+});
+
+const PerksType = new GraphQLObjectType({
+    name: 'Perks',
+    fields: () => ({
+        id: { type: GraphQLID },
+        name: { type: GraphQLString },
+        desc: { type: GraphQLString },
+        level: { type: GraphQLString },
     }),
 });
 
@@ -44,6 +55,7 @@ const LocationsType = new GraphQLObjectType({
 
 
 
+
 const Query = new GraphQLObjectType({
     name: 'Query',
     fields: {
@@ -51,6 +63,12 @@ const Query = new GraphQLObjectType({
             type: new GraphQLList(SpecialsType),
             resolve(parents, args){
                 return Specials.find({})
+            }
+        },
+        perks: {
+            type: new GraphQLList(PerksType),
+            resolve(parents, args){
+                return Perks.find({})
             }
         },
         characters: {
