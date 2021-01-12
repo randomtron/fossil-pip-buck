@@ -10,3 +10,14 @@ export const specialsQuery = gql`
         }
     }
 `;
+
+export const perksQuery = gql`
+    query perksQuery {
+        perks {
+            id
+            name
+            desc
+            level
+        }
+    }
+`;

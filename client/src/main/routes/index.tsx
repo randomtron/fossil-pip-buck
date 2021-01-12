@@ -8,6 +8,7 @@ import {Characters} from '../../components/data/characters/characters';
 import {Locations} from '../../components/data/locations/locations';
 
 import {Special} from '../../components/stat/special/special';
+import {Perks} from '../../components/stat/perks/perks';
 
 import s from './routes.module.css';
 
@@ -31,5 +32,6 @@ export const SubNavRoutes = () => {
         <Route path='/data/locations' render={() => <Locations/>}/>
 
         <Route path='/stat/special' render={() => <Special/>}/>
+        <Route path='/stat/perks' render={() => <Perks/>}/>
     </div>)
 };
