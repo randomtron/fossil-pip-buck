@@ -1,10 +1,10 @@
 import React from 'react';
 
 type PropsType = {
-    locations: Array<any>,
+    locations: Array<Array<String>>,
     setLocation: (id: string) => void,
     locationID: String,
-}
+};
 
 export const LocationsList: React.FC<PropsType> = ({ locations, setLocation, locationID }) => {
     let currentLocations = null
@@ -16,7 +16,7 @@ export const LocationsList: React.FC<PropsType> = ({ locations, setLocation, loc
                 onClick={() => setLocation(e.id)}>
                 <span>{e.name}</span>
             </div>)
-    }
+    };
 
     return (
         <div className="list">
