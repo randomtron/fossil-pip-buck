@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 
 import { Stat } from '../../components/stat/stat';
+import { Inv } from '../../components/inv/inv';
 import { Data } from '../../components/data/data';
 
 import { Characters } from '../../components/data/characters/characters';
@@ -21,8 +22,12 @@ export const Routes = () => {
                     path='/stat'
                     render={() => <Stat />} />
                 <Route
+                    path='/inv'
+                    render={() => <Inv />} />
+                <Route
                     path='/data'
                     render={() => <Data />} />
+
             </Switch>
         </div>
     );
