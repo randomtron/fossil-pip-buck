@@ -5,7 +5,7 @@ import { Header } from '../header/header';
 import { Routes } from '../../main/routes';
 import { Footer } from '../footer/footer';
 
-import './app.css';
+import './app.scss';
 
 export const App = () => {
     return (

@@ -3,13 +3,13 @@ import React from 'react';
 import {DataSubnav} from '../common/data-subnav/data-subnav';
 import {SubNavRoutes} from '../../main/routes';
 
-import s from './data.module.css';
+import './data.scss';
 
 export const Data = () => {
     return (
-        <div className={s.dataWrapper}>
+        <div className="dataWrapper">
             <DataSubnav/>
-            <div className={s.main}>
+            <div className="main">
                 <SubNavRoutes/>
             </div>
         </div>

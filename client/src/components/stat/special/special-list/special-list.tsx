@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './special-list.css';
+import './special-list.scss';
 
 type PropsType = {
     specials: Array<any>,

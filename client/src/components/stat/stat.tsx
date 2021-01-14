@@ -3,13 +3,13 @@ import React from 'react';
 import { StatSubnav } from '../common/stat-subnav/stat-subnav';
 import { SubNavRoutes } from '../../main/routes';
 
-import s from './stat.module.css';
+import './stat.scss';
 
 export const Stat = () => {
     return (
-        <div className={s.statWrapper}>
+        <div className="statWrapper">
             <StatSubnav />
-            <div className={s.main}>
+            <div className="main">
                 <SubNavRoutes />
             </div>
         </div>
