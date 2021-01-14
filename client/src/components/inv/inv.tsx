@@ -5,9 +5,9 @@ import {SubNavRoutes} from '../../main/routes';
 
 export const Inv = () => {
     return (
-        <div className="dataWrapper">
+        <div className="mainWrapper">
             <InvSubnav/>
-            <div className="main">
+            <div>
                 <SubNavRoutes/>
             </div>
         </div>

@@ -4,6 +4,9 @@ li {
   padding: 0;
   list-style-type: none;
 }
+
+
+
 .appWrapper {
     display: grid;
   
@@ -20,9 +23,19 @@ li {
     font-size: x-large;
   }
 
+.mainWrapper {
+  display: grid;
+  
+  grid-template-areas:
+  "s"
+  "m";
+  grid-template-rows:60px 2fr;
+  grid-template-columns: 1fr;
+}
 
 
 .main {
+  grid-area: m;
   display: grid;
   
   grid-template-areas:
