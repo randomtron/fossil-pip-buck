@@ -7,25 +7,13 @@ export const Header = () => {
     return (
         <header className="header">
             <NavLink 
-                to="/stat" 
+                to="/noteform" 
                 className="headerBlock"
-                activeClassName="headerBlockActive"><span>STAT</span></NavLink> 
+                activeClassName="headerBlockActive"><span>Форма записи</span></NavLink> 
             <NavLink 
-                to="/inv" 
+                to="/whitelist" 
                 className="headerBlock"
-                activeClassName="headerBlockActive"><span>INV</span></NavLink>
-            <NavLink 
-                to="/data" 
-                className="headerBlock"
-                activeClassName="headerBlockActive"><span>DATA</span></NavLink>
-            <NavLink 
-                to="/map" 
-                className="headerBlock"
-                activeClassName="headerBlockActive"><span>MAP</span></NavLink>
-            <NavLink 
-                to="/radio" 
-                className="headerBlock"
-                activeClassName="headerBlockActive"><span>RADIO</span></NavLink>
+                activeClassName="headerBlockActive"><span>Белый лист</span></NavLink>
         </header>
     );      
 };

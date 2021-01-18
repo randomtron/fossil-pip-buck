@@ -1,20 +1,12 @@
 @import "../../styles/mainFont.css";
 
-li {
-  padding: 0;
-  list-style-type: none;
-}
-
-
-
 .appWrapper {
     display: grid;
   
     grid-template-areas:
     "h"
-    "m"
-    "f";
-    grid-template-rows: 2fr 24fr 3fr;
+    "m";
+    grid-template-rows: 2fr 26fr;
     grid-template-columns: 1f;
 
     font-family: 'droid-sans';
@@ -36,12 +28,6 @@ li {
 
 .main {
   grid-area: m;
-  display: grid;
-  
-  grid-template-areas:
-  "l c";
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
 }
   
 .list {
@@ -52,29 +38,6 @@ li {
   grid-area: c;
   padding: 5px;
 }
-
-
-
-.sub-nav {
-    padding: 5px;
-    grid-area: s;
-    display: flex;
-    justify-content: center;
-}
-
-.sub-nav-block {
-  color:#13f016;
-  text-decoration: none;
-  margin: 10px;
-}
-
-.sub-nav-block-bold {
-  color:#13f016;
-  text-decoration: none;
-  margin: 10px;
-  font-weight: 700;
-}
-
 
 
 .section {
