@@ -7,7 +7,7 @@ const cors = require('cors');
 const app = express();
 const PORT = 3005;
 
-mongoose.connect('mongodb+srv://randomtron:random123@cluster0.cwtah.mongodb.net/test-task?retryWrites=true&w=majority', 
+mongoose.connect('mongodb+srv://randomtron:random123@cluster0.cwtah.mongodb.net/stable-tec?retryWrites=true&w=majority', 
                 {useNewUrlParser: true});
 
 app.use(cors());

@@ -3,6 +3,7 @@ import React from 'react';
 
 import { Header } from '../header/header';
 import { Routes } from '../../main/routes';
+import { Footer } from '../footer/footer';
 
 import './app.scss';
 
@@ -11,6 +12,7 @@ export const App = () => {
             <div className="appWrapper">
                 <Header />
                 <Routes />
+                <Footer />
             </div>
     );
 };
