@@ -5,7 +5,7 @@ import {SpecialList} from './special-list/special-list';
 import {SpecialContent} from './special-content/special-content';
 
 export const Special = () => {
-    const { specialID, setSpecial, specials } = useStatSpecial();
+    const { specialID, setSpecial, specials, imgPath } = useStatSpecial();
     return (
         <div className="main">
             <SpecialList 
@@ -14,7 +14,8 @@ export const Special = () => {
                 specialID={specialID}/>   
             <SpecialContent
                 specialID={specialID} 
-                specials={specials}/>
+                specials={specials}
+                imgPath={imgPath}/>
         </div>
     );
 };
