@@ -5,7 +5,7 @@ import {PerksList} from './perks-list/perks-list';
 import {PerksContent} from './perks-content/perks-content';
 
 export const Perks = () => {
-    const { perkID, setPerk, perks } = useStatPerks();
+    const { perkID, setPerk, perks, imgPath } = useStatPerks();
     return (
         <div className="main">
             <PerksList 
@@ -14,7 +14,8 @@ export const Perks = () => {
                 perkID={perkID}/>   
             <PerksContent
                 perkID={perkID} 
-                perks={perks}/>
+                perks={perks}
+                imgPath={imgPath}/>
         </div>
     );
 };
