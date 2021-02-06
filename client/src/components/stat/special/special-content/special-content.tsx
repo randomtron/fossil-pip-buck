@@ -11,7 +11,6 @@ export const SpecialContent: React.FC<PropsType> = ({ specials, specialID, imgPa
     if (specials) {
         currentSpecial = specials.find((e: any) => e.id === specialID)
     }
-    console.log(imgPath);
     return (
         <div className="content">
             <img className="icon" src={imgPath} alt="Loading..."/>
